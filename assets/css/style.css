@@ -1,7 +1,22 @@
-#button{
-    height:100px;
-    width:100px;
+#gem1{
+    height:150px;
+    width:150px;
+    background-color: red;
+}
+#gem2{
+    height:150px;
+    width:150px;
     background-color: blue;
+}
+#gem3{
+    height:150px;
+    width:150px;
+    background-color: green;
+}
+#gem4{
+    height:150px;
+    width:150px;
+    background-color: yellow;
 }
 /* p{
     color:red
