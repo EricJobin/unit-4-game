@@ -63,13 +63,13 @@ function setNewGameValues(){
 // }
 function checkGameEnd(){
     if (currentTotal == gameTotal){
-        alert("You've Won!!!")
+        setTimeout(function(){alert("You've Won!!!"); }, 200);
         gamesWon++
         totalWon.textContent = gamesWon;
         setNewGameValues()
     }
     else if(currentTotal > gameTotal){
-        alert("BUSTED!")
+        setTimeout(function(){alert("BUSTED!"); }, 200);
         gamesLost++
         totalLost.textContent = gamesLost;
         setNewGameValues()
