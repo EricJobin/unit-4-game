@@ -1,6 +1,6 @@
 //Global Variables
 var gameTotal =0;
-var gems = [0,0,0.0];
+var gems = [0,0,0,0];
 var currentTotal =0;
 var gamesWon =0;
 var gamesLost=0;
