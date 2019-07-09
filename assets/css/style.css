@@ -18,6 +18,22 @@
     width:150px;
     background-color: yellow;
 }
-/* p{
-    color:red
-} */
+.jumbotron{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Abril Fatface', cursive;
+
+}
+.toprow{
+    margin-top: 4%;
+}
+.lowrow{
+    margin-top: 2%;
+}
+body{
+    background-color: #ddd; 
+    background-image: url(../images/bkgnd.png);
+}
+#automusic{
+    display:none;
+}

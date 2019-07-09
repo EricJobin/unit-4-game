@@ -6,21 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gem Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
     <body>
         <div class="container">
-            <div class="row">
+            <div class="row toprow">
                 <div class="col-6 col-lg-4"> <!--Show goal score here -->
-                    <div class="jumbotron score">
+                    <div class="jumbotron score text-center">
                         <h1>Goal:</h1>
                         <h1 id="xgameTotal">0</h1>
                     </div>
                 </div>
                 <div class="col 6 col-lg-4"> <!--Show current score here -->
-                    <div class="jumbotron score">
+                    <div class="jumbotron score text-center">
                         <h1>Total:</h1>
                         <h1 id="xcurrentTotal">0</h1>
                     </div>
@@ -42,22 +43,24 @@
                 </div>
                 <div class="col-0 col-lg-4"></div> <!--White Space-->
             </div>
-            <div class ="row">
+            <div class ="row lowrow">
                 <div class="col 6 col-lg-4"> <!--Show won games here -->
-                    <div class="jumbotron score">
+                    <div class="jumbotron score text-center">
                         <h1>Games Won:</h1>
                         <h1 id="totalWon">0</h1>
                     </div>
                 </div>
                 <div class="col 6 col-lg-4"> <!--Show lost games here -->
-                    <div class="jumbotron score">
+                    <div class="jumbotron score text-center">
                         <h1>Games Lost:</h1>
                         <h1 id="totalLost">0</h1>
                     </div>
                 </div>
                 <div class="col-0 col-lg-4"></div>
             </div>        
-        
+            <div id="automusic">
+                <audio controls autoplay><source src="assets/images/theLastDiamond.mp3" type="audio/mpeg"></audio>
+            </div>
         
         
 
