@@ -14,6 +14,7 @@
     <body>
         <div class="container">
             <div class="row toprow">
+                <div class="col-0 col-lg-2"></div>
                 <div class="col-6 col-lg-4"> <!--Show goal score here -->
                     <div class="jumbotron score text-center">
                         <h1>Goal:</h1>
@@ -26,9 +27,10 @@
                         <h1 id="xcurrentTotal">0</h1>
                     </div>
                 </div>
-                <div class="col-0 col-lg-4"></div>
+                <div class="col-0 col-lg-2"></div>
             </div>
             <div class="row">
+                <div class="col-0 col-lg-2"></div>
                 <div class="col-3 col-lg-2" id="ruby"> <!--Gem1 Ruby-->
                     <div id="gem1"><img src="assets/images/ruby.jpg" alt="Ruby"></div>
                 </div>
@@ -41,31 +43,33 @@
                 <div class="col-3 col-lg-2" id="diamond"> <!--Gem4 Diamond-->
                     <div id="gem4"><img src="assets/images/diamond.jpg" alt="Diamond"></div>
                 </div>
-                <div class="col-0 col-lg-4"></div> <!--White Space-->
+                <div class="col-0 col-lg-2"></div> <!--White Space-->
             </div>
             <div class ="row lowrow">
-                <div class="col 6 col-lg-4"> <!--Show won games here -->
+                <div class="col-0 col-lg-2"></div>
+                <div class="col-6 col-lg-4"> <!--Show won games here -->
                     <div class="jumbotron score text-center">
                         <h1>Games Won:</h1>
                         <h1 id="totalWon">0</h1>
                     </div>
                 </div>
-                <div class="col 6 col-lg-4"> <!--Show lost games here -->
+                <div class="col-6 col-lg-4"> <!--Show lost games here -->
                     <div class="jumbotron score text-center">
                         <h1>Games Lost:</h1>
                         <h1 id="totalLost">0</h1>
                     </div>
                 </div>
-                <div class="col-0 col-lg-4"></div>
-            </div>        
-            <div id="automusic">
-                <audio controls autoplay><source src="assets/images/theLastDiamond.mp3" type="audio/mpeg"></audio>
+                <div class="col-0 col-lg-2"></div>
             </div>
-        
-        
-
-
-        
+            <div class ="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div id="automusic">
+                        <audio controls autoplay><source src="assets/images/theLastDiamond.mp3" type="audio/mpeg"></audio>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
 
         </div>
         <!-- JS libraries -->

@@ -12,99 +12,72 @@ var gemVal =0;
 var gemRepeat =false;
 
 //Functions
-function setGemValue(){
+function setGemValue(){ //Generates random value for a gem from 1 to 12
     gemVal = (Math.floor(Math.random()*12))+1;
 }
-function checkGemVal(){
+function checkGemVal(){ //Checks to see if new gem value is equal to any previous gems
     gemRepeat =false;
     for (y=0; y <x; y++){
         if (gemVal == gems[y]){
             gemRepeat = true;
         }
-        else{}
     }
     if (gemRepeat == false){
         gems[x] = gemVal;
         x++
     }
-    else{}
 }
-function setGems(){
+function setGems(){ //Sets the value of all 4 gems
     for (x=0; x<4;){
         setGemValue()
         checkGemVal()
     }
 }
-function setNewGameValues(){
-    // var gemRepeat =false;
+function setNewGameValues(){ //Sets initial values for a round
     var ranNum = (Math.floor(Math.random() * 102))+18;
     gameTotal = ranNum;
     currentTotal =0;
     xgameTotal.textContent = gameTotal;
     xcurrentTotal.textContent = 0;
     setGems()
-    console.log(gems)
 }
-
-
-// Below is the working function to set up all new game values/ Above writing function to ensure no dupicate gem values
-
-// function setNewGameValues(){
-//     var ranNum = (Math.floor(Math.random() * 102))+18;
-//     gameTotal = ranNum;
-//     currentTotal =0;
-//     xgameTotal.textContent = gameTotal;
-//     xcurrentTotal.textContent = 0;
-//     for (x=0; x<4; x++){
-//         var gemVal = (Math.floor(Math.random()*12))+1;
-//         gems[x] = gemVal;
-//     }
-//     console.log(gems)
-// }
-function checkGameEnd(){
+function checkGameEnd(){ //Checks for endstate; ++ games won/lost; Starts new game if gameover
     if (currentTotal == gameTotal){
-        setTimeout(function(){alert("You've Won!!!"); }, 100);
+        setTimeout(function(){alert("You've Won!!!"); }, 0);
         gamesWon++
         totalWon.textContent = gamesWon;
         setNewGameValues()
     }
     else if(currentTotal > gameTotal){
-        setTimeout(function(){alert("BUSTED!"); }, 100); //Hacking it up with the timeouts
+        setTimeout(function(){alert("BUSTED!"); }, 0); //Hacking it up with the timeouts
         gamesLost++
         totalLost.textContent = gamesLost;
         setNewGameValues()
     }
-    else{}
 }
 
 //Run Game
 
 setNewGameValues()
-$(document).ready(function() {
+$(document).ready(function() { // Listens for gem clicks and displays current total
     $("#gem1").on("click", function(){
         currentTotal =currentTotal + gems[0];
         xcurrentTotal.textContent = currentTotal;
-        // console.log(currentTotal)
         checkGameEnd()
     });
     $("#gem2").on("click", function(){
         currentTotal =currentTotal + gems[1];
         xcurrentTotal.textContent = currentTotal;
-        // console.log(currentTotal)
         checkGameEnd()
     });
     $("#gem3").on("click", function(){
         currentTotal =currentTotal + gems[2];
         xcurrentTotal.textContent = currentTotal;
-        // console.log(currentTotal)
         checkGameEnd()
     });
     $("#gem4").on("click", function(){
         currentTotal =currentTotal + gems[3];
         xcurrentTotal.textContent = currentTotal;
-        // console.log(currentTotal)
         checkGameEnd()
     });
 });
-
-// alert("connected")
